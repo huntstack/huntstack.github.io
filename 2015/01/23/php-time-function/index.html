@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>php_time_function | 山野幽居</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="天地四方曰宇，往古来今曰宙
+
+时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php_time_function">
+<meta property="og:url" content="http://huntstack.github.io/2015/01/23/php-time-function/index.html">
+<meta property="og:site_name" content="山野幽居">
+<meta property="og:description" content="天地四方曰宇，往古来今曰宙
+
+时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所">
+<meta property="og:updated_time" content="2016-01-23T08:30:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php_time_function">
+<meta name="twitter:description" content="天地四方曰宇，往古来今曰宙
+
+时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所">
+  
+    <link rel="alternative" href="/atom.xml" title="山野幽居" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/images/panda.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">六耳</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">赏八方风景，饮一口清泉</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">coding</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">六耳</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/images/panda.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">六耳</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">赏八方风景，饮一口清泉</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-php-time-function" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/01/23/php-time-function/" class="article-date">
+  	<time datetime="2015-01-23T03:07:00.000Z" itemprop="datePublished">2015-01-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php_time_function
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>天地四方曰宇，往古来今曰宙</p>
+</blockquote>
+<p>时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。<br>但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。<br>公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。<br>关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所经过的秒数，不考虑闰秒，什么是闰秒参考这里。<br>下面就来说说php中时间的处理方法，以获取当前时间为例</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">     date_default_timezone_set(<span class="string">'Asia/Shanghai'</span>);</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,time()).<span class="string">"\n"</span>;</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,strtotime(<span class="string">"now"</span>)).<span class="string">"\n"</span>;</span><br><span class="line">     <span class="variable">$date</span> = <span class="keyword">new</span> DateTime();</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.<span class="variable">$date</span>-&gt;format(<span class="string">"Y-m-d H:i:s"</span>).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="u65F6_u533A_u8BBE_u7F6E"><a href="#u65F6_u533A_u8BBE_u7F6E" class="headerlink" title="时区设置"></a>时区设置</h3><p><code>date_default_timezone_set</code>用于设置时区，优先级别高于php.ini中设置的<code>date.timezone</code>属性，可设置的时区列表见这里，与之对应的是<code>date_default_timezone_get</code>获取由set函数设置的时区。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">    date_default_timezone_set(<span class="string">'Asia/Shanghai'</span>);</span><br><span class="line">    <span class="variable">$date_set</span> = date_default_timezone_get();</span><br><span class="line">    <span class="comment">//如果与配置文件中的时区设置相同则设置为美国时区</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$date_set</span> == ini_get(<span class="string">"date.timezone"</span>))&#123;</span><br><span class="line">        date_default_timezone_set(<span class="string">'America/Los_Angeles'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">echo</span> date(<span class="string">"Y-m-d H:i:s"</span>).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="u83B7_u53D6UNIX_u65F6_u95F4_u6233"><a href="#u83B7_u53D6UNIX_u65F6_u95F4_u6233" class="headerlink" title="获取UNIX时间戳"></a>获取UNIX时间戳</h3><p>常用的方法有三种：time(),microtime(),strotime(“now”)</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">    error_reporting(E_ALL ^E_STRICT);</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"time is "</span>.time().<span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"strotime is "</span>.strtotime(<span class="string">"now"</span>).<span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"mktime is "</span>.mktime().<span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"microtime is "</span>.microtime().<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//参数设置为true返回浮点数表示的时间戳</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"in float microtime is "</span>.microtime(<span class="keyword">true</span>).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="mktime"><a href="#mktime" class="headerlink" title="mktime"></a>mktime</h3><p>mktime函数的参数全是关键字参数，关键字参数大家懂的可以从右到左省略，格式为时，分，秒，月，日，年</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//年默认2014</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"mktime(10,10,10,10,12) is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,mktime(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">12</span>)).<span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//这种写法会将2014当作月数，年还是默认的2014年</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"mktime(10,10,10,10,2014) is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,mktime(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">2014</span>)).<span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"mktime(10,10,10,10,32,2014) is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,mktime(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">32</span>,<span class="number">2014</span>)).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>出现了一些很奇妙的事情，2014年2014月变成了2020年4月，2014年10月32号变成了11月1号，看，mktime自动计算了相差部分。乍看之下感觉很神奇，细想下来又在情理之中，毕竟日期的相互转换是通过unix时间戳进行的，我们可以通过mktime的实现源码管中窥豹一下。</p>
+<p>该函数源码位于ext/date/php_date.c 在1500行实现，篇幅所限只贴部分代码，兴趣的朋友可以下下来自己看，地址在这里.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">PHPAPI <span class="keyword">void</span> <span class="title">php_mktime</span><span class="params">(INTERNAL_FUNCTION_PARAMETERS, <span class="keyword">int</span> gmt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    zend_long hou = <span class="number">0</span>, min = <span class="number">0</span>, sec = <span class="number">0</span>, mon = <span class="number">0</span>, day = <span class="number">0</span>, yea = <span class="number">0</span>, dst = -<span class="number">1</span>;</span><br><span class="line">    timelib_time *now;</span><br><span class="line">    timelib_tzinfo *tzi = <span class="literal">NULL</span>;</span><br><span class="line">    zend_long ts, adjust_seconds = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> error;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, <span class="string">"|lllllll"</span>, &amp;hou, &amp;min, &amp;sec, &amp;mon, &amp;day, &amp;yea, &amp;dst) == FAILURE) &#123;</span><br><span class="line">        RETURN_FALSE;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Initialize structure with current time */</span></span><br><span class="line">    now = timelib_time_ctor();</span><br><span class="line">    <span class="keyword">if</span> (gmt) &#123;</span><br><span class="line">        timelib_unixtime2gmt(now, (timelib_sll) time(<span class="literal">NULL</span>));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        tzi = get_timezone_info(TSRMLS_C);</span><br><span class="line">        now-&gt;tz_info = tzi;</span><br><span class="line">        now-&gt;zone_type = TIMELIB_ZONETYPE_ID;</span><br><span class="line">        timelib_unixtime2local(now, (timelib_sll) time(<span class="literal">NULL</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Fill in the new data */</span></span><br><span class="line">    <span class="keyword">switch</span> (ZEND_NUM_ARGS()) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">            <span class="comment">/* break intentionally missing */</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">            <span class="keyword">if</span> (yea &gt;= <span class="number">0</span> &amp;&amp; yea &lt; <span class="number">70</span>) &#123;</span><br><span class="line">                yea += <span class="number">2000</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (yea &gt;= <span class="number">70</span> &amp;&amp; yea &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">                yea += <span class="number">1900</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            now-&gt;y = yea;</span><br><span class="line">            <span class="comment">/* break intentionally missing again */</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            now-&gt;d = day;</span><br><span class="line">            <span class="comment">/* break missing intentionally here too */</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            now-&gt;m = mon;</span><br><span class="line">            <span class="comment">/* and here */</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            now-&gt;s = sec;</span><br><span class="line">            <span class="comment">/* yup, this break isn't here on purpose too */</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            now-&gt;i = min;</span><br><span class="line">            <span class="comment">/* last intentionally missing break */</span></span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            now-&gt;h = hou;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            php_error_docref(<span class="literal">NULL</span> TSRMLS_CC, E_STRICT, <span class="string">"You should be using the time() function instead"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Update the timestamp */</span></span><br><span class="line">    <span class="keyword">if</span> (gmt) &#123;</span><br><span class="line">        timelib_update_ts(now, <span class="literal">NULL</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        timelib_update_ts(now, tzi);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Support for the deprecated is_dst parameter */</span></span><br><span class="line">    <span class="keyword">if</span> (dst != -<span class="number">1</span>) &#123;</span><br><span class="line">        php_error_docref(<span class="literal">NULL</span> TSRMLS_CC, E_DEPRECATED, <span class="string">"The is_dst parameter is deprecated"</span>);</span><br><span class="line">        <span class="keyword">if</span> (gmt) &#123;</span><br><span class="line">            <span class="comment">/* GMT never uses DST */</span></span><br><span class="line">            <span class="keyword">if</span> (dst == <span class="number">1</span>) &#123;</span><br><span class="line">                adjust_seconds = -<span class="number">3600</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">/* Figure out is_dst for current TS */</span></span><br><span class="line">            timelib_time_offset *tmp_offset;</span><br><span class="line">            tmp_offset = timelib_get_time_zone_info(now-&gt;sse, tzi);</span><br><span class="line">            <span class="keyword">if</span> (dst == <span class="number">1</span> &amp;&amp; tmp_offset-&gt;is_dst == <span class="number">0</span>) &#123;</span><br><span class="line">                adjust_seconds = -<span class="number">3600</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (dst == <span class="number">0</span> &amp;&amp; tmp_offset-&gt;is_dst == <span class="number">1</span>) &#123;</span><br><span class="line">                adjust_seconds = +<span class="number">3600</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            timelib_time_offset_dtor(tmp_offset);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Clean up and return */</span></span><br><span class="line">    ts = timelib_date_to_int(now, &amp;error);</span><br><span class="line">    ts += adjust_seconds;</span><br><span class="line">    timelib_time_dtor(now);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">        RETURN_FALSE;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        RETURN_LONG(ts);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>阅读这段代码需知道一个重要的结构体<code>timelib_time</code>，在ext/date/lib/timelib_structs.h中声明</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">typedef</span> <span class="keyword">struct</span> timelib_time &#123;</span><br><span class="line">    timelib_sll      y, m, d;     <span class="comment">/* Year, Month, Day */</span></span><br><span class="line">    timelib_sll      h, i, s;     <span class="comment">/* Hour, mInute, Second */</span></span><br><span class="line">    <span class="keyword">double</span>           f;           <span class="comment">/* Fraction */</span></span><br><span class="line">    <span class="keyword">int</span>              z;           <span class="comment">/* GMT offset in minutes */</span></span><br><span class="line">    <span class="keyword">char</span>            *tz_abbr;     <span class="comment">/* Timezone abbreviation (display only) */</span></span><br><span class="line">    timelib_tzinfo  *tz_info;     <span class="comment">/* Timezone structure */</span></span><br><span class="line">    <span class="keyword">signed</span> <span class="keyword">int</span>       dst;         <span class="comment">/* Flag if we were parsing a DST zone */</span></span><br><span class="line">    timelib_rel_time relative;</span><br><span class="line"></span><br><span class="line">    timelib_sll      sse;         <span class="comment">/* Seconds since epoch */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span>   have_time, have_date, have_zone, have_relative, have_weeknr_day;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span>   sse_uptodate; <span class="comment">/* !0 if the sse member is up to date with the date/time members */</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span>   tim_uptodate; <span class="comment">/* !0 if the date/time members are up to date with the sse member */</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span>   is_localtime; <span class="comment">/*  1 if the current struct represents localtime, 0 if it is in GMT */</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span>   zone_type;    <span class="comment">/*  1 time offset,</span><br><span class="line">                                  *  3 TimeZone identifier,</span><br><span class="line">                                  *  2 TimeZone abbreviation */</span></span><br><span class="line">&#125; timelib_time;</span><br></pre></td></tr></table></figure>
+<p>现在来看看mktime,56行的<code>timelib_update_ts</code>函数位于ext/date/lib/tm2unixtime.c文件中，其作用是根据now中的日期信息计算相应的秒数并存入now-&gt;sse，来看看</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">timelib_update_ts</span><span class="params">(timelib_time* time, timelib_tzinfo* tzi)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    timelib_sll res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    do_adjust_special_early(time);</span><br><span class="line">    do_adjust_relative(time);</span><br><span class="line">    do_adjust_special(time);</span><br><span class="line">    res += do_years(time-&gt;y);</span><br><span class="line">    res += do_months(time-&gt;m, time-&gt;y);</span><br><span class="line">    res += do_days(time-&gt;d);</span><br><span class="line">    res += do_time(time-&gt;h, time-&gt;i, time-&gt;s);</span><br><span class="line">    time-&gt;sse = res;</span><br><span class="line"></span><br><span class="line">    res += do_adjust_timezone(time, tzi);</span><br><span class="line">    time-&gt;sse = res;</span><br><span class="line"></span><br><span class="line">    time-&gt;sse_uptodate = <span class="number">1</span>;</span><br><span class="line">    time-&gt;have_relative = time-&gt;relative.have_weekday_relative = time-&gt;relative.have_special_relative = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>8-11行计算相应时间类型的秒数，到这里已可了解mktime自动增减日期的原理，让我们看看do_days是如何实现的。day-1应该不难理解，mktime前面需要传入小时分钟等参数，在处理具体的某一天时默认为当天的0点0分0秒，所以要比实际的天数少一天。do_months,do_years等机制都相同，不再细述。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> timelib_sll <span class="title">do_days</span><span class="params">(timelib_ull day)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ((day - <span class="number">1</span>) * SECS_PER_DAY);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当日期处理完成，我们回到php_date.c，在80行处通过<code>timelib_date_to_int</code>函数将now-&gt;sse返回，该函数位于ext/date/lib/timelib.c，具体的代码就不贴了。</p>
+<h3 id="strtotime"><a href="#strtotime" class="headerlink" title="strtotime"></a>strtotime</h3><p>聊完了mktime，再来看看strtotime，同样先来几个例子</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"strtotime('+1 day',strtotime('2014/10/19')) is "</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"+1 day"</span>,strtotime(<span class="string">"2014/10/19"</span>))).<span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"strtotime('-30 day') is "</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"-30 day"</span>)).<span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"strtotime('+1 week') is "</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"+1 week"</span>)).<span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"strtotime('last Monday) is "</span>.date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"last Monday"</span>)).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>strtotime相较mktime要复杂很多，在于其对英文文本的解析过程，这里用到了词法解析工具re2c，原始文件位于ext/date/lib/parse_date.re,同目录下还有个parse_date.c是编译后的文件,parse_date.c太大，我们分析parse_date.re就可以了，以strtotime(“+1 day”)为例，下面是php_date.c中的实现代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">PHP_FUNCTION(strtotime)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> *times, *initial_ts;</span><br><span class="line">    <span class="keyword">size_t</span>   time_len;</span><br><span class="line">    <span class="keyword">int</span> error1, error2;</span><br><span class="line">    <span class="keyword">struct</span> timelib_error_container *error;</span><br><span class="line">    zend_long preset_ts = <span class="number">0</span>, ts;</span><br><span class="line"></span><br><span class="line">    timelib_time *t, *now;</span><br><span class="line">    timelib_tzinfo *tzi;</span><br><span class="line"></span><br><span class="line">    tzi = get_timezone_info(TSRMLS_C);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, <span class="string">"sl"</span>, &amp;times, &amp;time_len, &amp;preset_ts) != FAILURE) &#123;</span><br><span class="line">        <span class="comment">/* We have an initial timestamp */</span></span><br><span class="line">        now = timelib_time_ctor();</span><br><span class="line"></span><br><span class="line">        initial_ts = emalloc(<span class="number">25</span>);</span><br><span class="line">        <span class="built_in">snprintf</span>(initial_ts, <span class="number">24</span>, <span class="string">"@"</span> ZEND_LONG_FMT <span class="string">" UTC"</span>, preset_ts);</span><br><span class="line">        t = timelib_strtotime(initial_ts, <span class="built_in">strlen</span>(initial_ts), <span class="literal">NULL</span>, DATE_TIMEZONEDB, php_date_parse_tzfile_wrapper); <span class="comment">/* we ignore the error here, as this should never fail */</span></span><br><span class="line">        timelib_update_ts(t, tzi);</span><br><span class="line">        now-&gt;tz_info = tzi;</span><br><span class="line">        now-&gt;zone_type = TIMELIB_ZONETYPE_ID;</span><br><span class="line">        timelib_unixtime2local(now, t-&gt;sse);</span><br><span class="line">        timelib_time_dtor(t);</span><br><span class="line">        efree(initial_ts);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, <span class="string">"s|l"</span>, &amp;times, &amp;time_len, &amp;preset_ts) != FAILURE) &#123;</span><br><span class="line">        <span class="comment">/* We have no initial timestamp */</span></span><br><span class="line">        now = timelib_time_ctor();</span><br><span class="line">        now-&gt;tz_info = tzi;</span><br><span class="line">        now-&gt;zone_type = TIMELIB_ZONETYPE_ID;</span><br><span class="line">        timelib_unixtime2local(now, (timelib_sll) time(<span class="literal">NULL</span>));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        RETURN_FALSE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!time_len) &#123;</span><br><span class="line">        timelib_time_dtor(now);    </span><br><span class="line">        RETURN_FALSE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    t = timelib_strtotime(times, time_len, &amp;error, DATE_TIMEZONEDB, php_date_parse_tzfile_wrapper);</span><br><span class="line">    error1 = error-&gt;error_count;</span><br><span class="line">    timelib_error_container_dtor(error);</span><br><span class="line">    timelib_fill_holes(t, now, TIMELIB_NO_CLONE);</span><br><span class="line">    timelib_update_ts(t, tzi);</span><br><span class="line">    ts = timelib_date_to_int(t, &amp;error2);</span><br><span class="line"></span><br><span class="line">    timelib_time_dtor(now);</span><br><span class="line">    timelib_time_dtor(t);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (error1 || error2) &#123;</span><br><span class="line">        RETURN_FALSE;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        RETURN_LONG(ts);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>if用来解析参数，分为有第二个参数和没有第二个参数的情况，这里略过不提，主要关注timelib_strtotime函数，它在parse_date.re中定义，返回解析后的timelib_time结构体。而timelib_strtotime又会调用parse_date.re中的scan方法来解析字符串，这里有几个重要的正则表达式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">reltextnumber = 'first'|'second'|'third'|'fourth'|'fifth'|'sixth'|'seventh'|'eight'|'eighth'|'ninth'|'tenth'|'eleventh'|'twelfth';</span><br><span class="line">reltexttext = 'next'|'last'|'previous'|'this';</span><br><span class="line">reltextunit = (('sec'|'second'|'min'|'minute'|'hour'|'day'|'fortnight'|'forthnight'|'month'|'year') 's'?) | 'weeks' | daytext;</span><br><span class="line"></span><br><span class="line">relnumber = ([+-]*[ \t]*[0-9]+);</span><br><span class="line">relative = relnumber space? (reltextunit | 'week' );</span><br><span class="line">relativetext = (reltextnumber|reltexttext) space reltextunit;</span><br><span class="line">relativetextweek = reltexttext space 'week';</span><br></pre></td></tr></table></figure>
+<p>“+1 day”会被解析为relative,并进行relative的相关操作</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">relative</span><br><span class="line">    &#123;</span><br><span class="line">        timelib_ull i;</span><br><span class="line">        DEBUG_OUTPUT(<span class="string">"relative"</span>);</span><br><span class="line">        TIMELIB_INIT;</span><br><span class="line">        TIMELIB_HAVE_RELATIVE();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(*ptr) &#123;</span><br><span class="line">            i = timelib_get_unsigned_nr((<span class="keyword">char</span> **) &amp;ptr, <span class="number">24</span>);</span><br><span class="line">            timelib_eat_spaces((<span class="keyword">char</span> **) &amp;ptr);</span><br><span class="line">            timelib_set_relative((<span class="keyword">char</span> **) &amp;ptr, i, <span class="number">1</span>, s);</span><br><span class="line">        &#125;</span><br><span class="line">        TIMELIB_DEINIT;</span><br><span class="line">        <span class="keyword">return</span> TIMELIB_RELATIVE;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><code>timelib_get_unsigned_nr</code> 用来判断是”+”还是”-“，参数24用来指定最大的字符串长度，然后调用<code>timelib_get_nr</code>获取后面的具体数字，最后调用<code>timelib_set_relative</code>设置<code>timelib_time</code> 结构体中relative.d=1。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> timelib_ull <span class="title">timelib_get_unsigned_nr</span><span class="params">(<span class="keyword">char</span> **ptr, <span class="keyword">int</span> max_length)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    timelib_ull dir = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (((**ptr &lt; <span class="string">'0'</span>) || (**ptr &gt; <span class="string">'9'</span>)) &amp;&amp; (**ptr != <span class="string">'+'</span>) &amp;&amp; (**ptr != <span class="string">'-'</span>)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (**ptr == <span class="string">'\0'</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> TIMELIB_UNSET;</span><br><span class="line">        &#125;</span><br><span class="line">        ++*ptr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (**ptr == <span class="string">'+'</span> || **ptr == <span class="string">'-'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (**ptr == <span class="string">'-'</span>) &#123;</span><br><span class="line">            dir *= -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ++*ptr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">dir * <span class="title">timelib_get_nr</span><span class="params">(ptr, max_length)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">timelib_set_relative</span><span class="params">(<span class="keyword">char</span> **ptr, timelib_sll amount, <span class="keyword">int</span> behavior, Scanner *s)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> timelib_relunit* relunit;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!(relunit = timelib_lookup_relunit(ptr))) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">switch</span> (relunit-&gt;unit) &#123;</span><br><span class="line">        <span class="keyword">case</span> TIMELIB_SECOND: s-&gt;time-&gt;relative.s += amount * relunit-&gt;multiplier; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> TIMELIB_MINUTE: s-&gt;time-&gt;relative.i += amount * relunit-&gt;multiplier; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> TIMELIB_HOUR:   s-&gt;time-&gt;relative.h += amount * relunit-&gt;multiplier; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> TIMELIB_DAY:    s-&gt;time-&gt;relative.d += amount * relunit-&gt;multiplier; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> TIMELIB_MONTH:  s-&gt;time-&gt;relative.m += amount * relunit-&gt;multiplier; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> TIMELIB_YEAR:   s-&gt;time-&gt;relative.y += amount * relunit-&gt;multiplier; <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">case</span> TIMELIB_WEEKDAY:</span><br><span class="line">            TIMELIB_HAVE_WEEKDAY_RELATIVE();</span><br><span class="line">            TIMELIB_UNHAVE_TIME();</span><br><span class="line">            s-&gt;time-&gt;relative.d += (amount &gt; <span class="number">0</span> ? amount - <span class="number">1</span> : amount) * <span class="number">7</span>;</span><br><span class="line">            s-&gt;time-&gt;relative.weekday = relunit-&gt;multiplier;</span><br><span class="line">            s-&gt;time-&gt;relative.weekday_behavior = behavior;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">case</span> TIMELIB_SPECIAL:</span><br><span class="line">            TIMELIB_HAVE_SPECIAL_RELATIVE();</span><br><span class="line">            TIMELIB_UNHAVE_TIME();</span><br><span class="line">            s-&gt;time-&gt;relative.special.type = relunit-&gt;multiplier;</span><br><span class="line">            s-&gt;time-&gt;relative.special.amount = amount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">timelib_set_relative</span><br></pre></td></tr></table></figure>
+<p>随后就和mktime一样调用相关处理函数转换为时间戳，有一点需要注意，<code>timelib_set_relative</code>的实现方式是直接在日期或月份上操作，下面这样的代码会出现问题</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> date(<span class="string">"Y-m-d"</span>,strtotime(<span class="string">"-1 month"</span>,strtotime(<span class="string">"2014/03/31"</span>))).<span class="string">"\n"</span>;</span><br></pre></td></tr></table></figure>
+<p>输出结果为2014-03-03，按照上述流程，2014/03/31会转为2014/02/31处理，等价于mktime(00,00,00,2,31,2014),mktime的处理方式上文已经说过了:P</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/02/10/dream/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          dream
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="php-time-function" data-title="php_time_function" data-url="http://huntstack.github.io/2015/01/23/php-time-function/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuer"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 六耳
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
