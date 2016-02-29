@@ -9,12 +9,8 @@
   <meta name="description" content="收集了我在使用instruments UIAutomation过程中遇到的问题，没有什么先后顺序，欢迎大家补充
 
 Q: 有哪些准备工作要做？A: 如下：
-
 打开开发者选项中的Enable UI Automation
-app使用debug模式安装，采用iPhone Developer签名
-
-
-Q: 有些app在第一次使用时会弹出是否使用地理位置等alert信息，如何解决？A: 使用官方提供的默认脚本">
+app使用debug模式安装，采用iPhone Developer签名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS UIAutomation Q&A">
 <meta property="og:url" content="http://huntstack.github.io/2016/01/23/ios-uiautomation/index.html">
@@ -22,24 +18,16 @@ Q: 有些app在第一次使用时会弹出是否使用地理位置等alert信息
 <meta property="og:description" content="收集了我在使用instruments UIAutomation过程中遇到的问题，没有什么先后顺序，欢迎大家补充
 
 Q: 有哪些准备工作要做？A: 如下：
-
 打开开发者选项中的Enable UI Automation
-app使用debug模式安装，采用iPhone Developer签名
-
-
-Q: 有些app在第一次使用时会弹出是否使用地理位置等alert信息，如何解决？A: 使用官方提供的默认脚本">
-<meta property="og:updated_time" content="2016-01-24T05:22:58.000Z">
+app使用debug模式安装，采用iPhone Developer签名">
+<meta property="og:updated_time" content="2016-02-29T03:17:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS UIAutomation Q&A">
 <meta name="twitter:description" content="收集了我在使用instruments UIAutomation过程中遇到的问题，没有什么先后顺序，欢迎大家补充
 
 Q: 有哪些准备工作要做？A: 如下：
-
 打开开发者选项中的Enable UI Automation
-app使用debug模式安装，采用iPhone Developer签名
-
-
-Q: 有些app在第一次使用时会弹出是否使用地理位置等alert信息，如何解决？A: 使用官方提供的默认脚本">
+app使用debug模式安装，采用iPhone Developer签名">
   
     <link rel="alternative" href="/atom.xml" title="山野幽居" type="application/atom+xml">
   
@@ -239,12 +227,14 @@ Q: 有些app在第一次使用时会弹出是否使用地理位置等alert信息
       
         <p>收集了我在使用instruments UIAutomation过程中遇到的问题，没有什么先后顺序，欢迎大家补充</p>
 <ol>
-<li><p>Q: 有哪些准备工作要做？<br>A: 如下：</p>
-<ul>
+<li>Q: 有哪些准备工作要做？<br>A: 如下：<ul>
 <li>打开<code>开发者</code>选项中的<code>Enable UI Automation</code></li>
 <li>app使用debug模式安装，采用<code>iPhone Developer</code>签名</li>
 </ul>
 </li>
+</ol>
+<a id="more"></a>
+<ol>
 <li><p>Q: 有些app在第一次使用时会弹出是否使用地理位置等alert信息，如何解决？<br>A: 使用官方提供的默认脚本即可，在<code>delay()</code>函数之后调用</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  UIATarget.localTarget().delay(<span class="number">5</span>);</span><br><span class="line">  UIATarget.onAlert = <span class="function"><span class="keyword">function</span> <span class="title">onAlert</span>(<span class="params">alert</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> title = alert.name();</span><br><span class="line">	UIALogger.logMessage(<span class="string">'On Alert: '</span> + title);</span><br><span class="line">	<span class="comment">//默认点击第二个按钮</span></span><br><span class="line">	alert.buttons()[<span class="number">1</span>].tap();</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
