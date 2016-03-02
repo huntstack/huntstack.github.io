@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>javascript创建对象的几种方法 | 山野幽居</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="工厂模式通过new关键字直接创建对象
+1234567var wow = new Object();wow.name = &quot;魔兽世界&quot;;wow.company = &quot;暴雪&quot;;wow.run = function()&amp;#123;    console.log(this.company + &quot;制作了&quot; + this.name); &amp;#125;;wow.run(); //暴雪制作了魔兽世界
+这种方式有个显">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript创建对象的几种方法">
+<meta property="og:url" content="http://huntstack.github.io/2016/11/20/js-class/index.html">
+<meta property="og:site_name" content="山野幽居">
+<meta property="og:description" content="工厂模式通过new关键字直接创建对象
+1234567var wow = new Object();wow.name = &quot;魔兽世界&quot;;wow.company = &quot;暴雪&quot;;wow.run = function()&amp;#123;    console.log(this.company + &quot;制作了&quot; + this.name); &amp;#125;;wow.run(); //暴雪制作了魔兽世界
+这种方式有个显">
+<meta property="og:updated_time" content="2016-03-01T08:19:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript创建对象的几种方法">
+<meta name="twitter:description" content="工厂模式通过new关键字直接创建对象
+1234567var wow = new Object();wow.name = &quot;魔兽世界&quot;;wow.company = &quot;暴雪&quot;;wow.run = function()&amp;#123;    console.log(this.company + &quot;制作了&quot; + this.name); &amp;#125;;wow.run(); //暴雪制作了魔兽世界
+这种方式有个显">
+  
+    <link rel="alternative" href="/atom.xml" title="山野幽居" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/images/panda.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">六耳</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">赏八方风景，饮一口清泉</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/移动专项/" style="font-size: 10px;">移动专项</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">coding</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">六耳</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/images/panda.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">六耳</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">赏八方风景，饮一口清泉</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-js-class" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/20/js-class/" class="article-date">
+  	<time datetime="2016-11-20T07:06:19.000Z" itemprop="datePublished">2016-11-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript创建对象的几种方法
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u5DE5_u5382_u6A21_u5F0F"><a href="#u5DE5_u5382_u6A21_u5F0F" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>通过<code>new</code>关键字直接创建对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">wow.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">wow.company = <span class="string">"暴雪"</span>;</span><br><span class="line">wow.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name); </span><br><span class="line">&#125;;</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br></pre></td></tr></table></figure>
+<p>这种方式有个显而易见的缺点是如果想创建相似的对象需要写大量的冗余代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hearthStone = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">hearthStone.name = <span class="string">"炉石传说"</span>;</span><br><span class="line">hearthStone.company = <span class="string">"暴雪"</span>;</span><br><span class="line">hearthStone.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name); </span><br><span class="line">&#125;;</span><br><span class="line">hearthStone.run(); <span class="comment">//暴雪制作了炉石传说</span></span><br></pre></td></tr></table></figure>
+<p>有人可能会想到这样取巧的方法,但是行不通滴</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">wow.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">wow.company = <span class="string">"暴雪"</span>;</span><br><span class="line">wow.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br><span class="line"><span class="keyword">var</span> hearthStone = wow; <span class="comment">//得到的wow是引用</span></span><br><span class="line">hearthStone.name = <span class="string">"炉石传说"</span>;</span><br><span class="line">hearthStone.run(); <span class="comment">//暴雪制作了炉石传说</span></span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了炉石传说</span></span><br></pre></td></tr></table></figure>
+<p>可以使用工厂函数来解决</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Game</span>(<span class="params">name, company</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> game = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">	game.name = name;</span><br><span class="line">	game.company = company;</span><br><span class="line">	game.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">return</span> game;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> wow = Game(<span class="string">"魔兽世界"</span>, <span class="string">"暴雪"</span>);</span><br><span class="line"><span class="keyword">var</span> hearthStone = Game(<span class="string">"炉石传说"</span>, <span class="string">"暴雪"</span>);</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br><span class="line">hearthStone.run(); <span class="comment">//暴雪制作了炉石传说</span></span><br></pre></td></tr></table></figure>
+<p>这种方式的问题是每一次创建一个game对象,run方法都必须重新创建一次。</p>
+<h2 id="u6784_u9020_u51FD_u6570_u6A21_u5F0F"><a href="#u6784_u9020_u51FD_u6570_u6A21_u5F0F" class="headerlink" title="构造函数模式"></a>构造函数模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Game</span>(<span class="params">name, company</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.company = company;</span><br><span class="line">    <span class="keyword">this</span>.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> Game(<span class="string">"魔兽世界"</span>, <span class="string">"暴雪"</span>);</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br></pre></td></tr></table></figure>
+<p>和工厂方法有一样的问题。</p>
+<h2 id="u539F_u578B_u6A21_u5F0F"><a href="#u539F_u578B_u6A21_u5F0F" class="headerlink" title="原型模式"></a>原型模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Game</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Game.prototype.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">Game.prototype.company = <span class="string">"暴雪"</span>;</span><br><span class="line">Game.prototype.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> Game();</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br></pre></td></tr></table></figure>
+<p>这种方式的最大问题是当属性的值是引用时，改变该属性会改变所有实例的属性值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Game</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Game.prototype.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">Game.prototype.company = <span class="string">"暴雪"</span>;</span><br><span class="line">Game.prototype.info = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">Game.prototype.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> Game();</span><br><span class="line"><span class="keyword">var</span> hearthStone = <span class="keyword">new</span> Game();</span><br><span class="line">hearthStone.info.push(<span class="string">"1.0.0"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(hearthStone.info); <span class="comment">//["1.0.0"]</span></span><br><span class="line"><span class="built_in">console</span>.log(wow.info);<span class="comment">//["1.0.0"]</span></span><br></pre></td></tr></table></figure>
+<h2 id="u6DF7_u5408_u6A21_u5F0F"><a href="#u6DF7_u5408_u6A21_u5F0F" class="headerlink" title="混合模式"></a>混合模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Game</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">    <span class="keyword">this</span>.company = <span class="string">"暴雪"</span>;</span><br><span class="line">&#125;</span><br><span class="line">Game.prototype.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> Game();</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br></pre></td></tr></table></figure>
+<h2 id="u52A8_u6001_u539F_u578B_u6A21_u5F0F"><a href="#u52A8_u6001_u539F_u578B_u6A21_u5F0F" class="headerlink" title="动态原型模式"></a>动态原型模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Game</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">    <span class="keyword">this</span>.company = <span class="string">"暴雪"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> Game.run === <span class="string">"undefined"</span>)&#123;</span><br><span class="line">    Game.prototype.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> Game();</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br></pre></td></tr></table></figure>
+<p>推荐使用混合模式和动态原型模式</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/23/ios-uiautomation/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS UIAutomation Q&amp;A</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js-class" data-title="javascript创建对象的几种方法" data-url="http://huntstack.github.io/2016/11/20/js-class/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuer"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 六耳
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
