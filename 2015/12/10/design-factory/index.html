@@ -4,17 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>山野幽居|赏八方风景，饮一口清泉</title>
+  <title>工厂模式 | 山野幽居|赏八方风景，饮一口清泉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web开发，游戏开发，移动测试，自动化，android， ios专项">
-<meta property="og:type" content="website">
-<meta property="og:title" content="山野幽居|赏八方风景，饮一口清泉">
-<meta property="og:url" content="http://huntstack.github.io/index.html">
+  <meta name="description" content="太上老君的尊号是道德天尊，在《西游记》中代表着三界的最高科技水平，制作了很多厉害的法宝，九齿钉耙、七星剑、幌金绳等。可不可以用代码来实现这个过程呢？答案当然是可以的.先来分析分析，制作法宝的过程涉及了三个对象：太上老君、八卦炉、各种不同的法宝，其中八卦炉就相当于一个生产工厂。
+首先我们定义法宝的接口
+1234567//法宝接口public interface MagicWeapon &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工厂模式">
+<meta property="og:url" content="http://huntstack.github.io/2015/12/10/design-factory/index.html">
 <meta property="og:site_name" content="山野幽居|赏八方风景，饮一口清泉">
-<meta property="og:description" content="web开发，游戏开发，移动测试，自动化，android， ios专项">
+<meta property="og:description" content="太上老君的尊号是道德天尊，在《西游记》中代表着三界的最高科技水平，制作了很多厉害的法宝，九齿钉耙、七星剑、幌金绳等。可不可以用代码来实现这个过程呢？答案当然是可以的.先来分析分析，制作法宝的过程涉及了三个对象：太上老君、八卦炉、各种不同的法宝，其中八卦炉就相当于一个生产工厂。
+首先我们定义法宝的接口
+1234567//法宝接口public interface MagicWeapon &amp;#123;">
+<meta property="og:image" content="http://huntstack.github.io/images/2016/design-factory-1.png">
+<meta property="og:image" content="http://huntstack.github.io/images/2016/design-factory-2.png">
+<meta property="og:updated_time" content="2016-03-05T05:36:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="山野幽居|赏八方风景，饮一口清泉">
-<meta name="twitter:description" content="web开发，游戏开发，移动测试，自动化，android， ios专项">
+<meta name="twitter:title" content="工厂模式">
+<meta name="twitter:description" content="太上老君的尊号是道德天尊，在《西游记》中代表着三界的最高科技水平，制作了很多厉害的法宝，九齿钉耙、七星剑、幌金绳等。可不可以用代码来实现这个过程呢？答案当然是可以的.先来分析分析，制作法宝的过程涉及了三个对象：太上老君、八卦炉、各种不同的法宝，其中八卦炉就相当于一个生产工厂。
+首先我们定义法宝的接口
+1234567//法宝接口public interface MagicWeapon &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="山野幽居|赏八方风景，饮一口清泉" type="application/atom+xml">
   
@@ -175,137 +184,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-i-am-in-march" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/02/i-am-in-march/" class="article-date">
-  	<time datetime="2016-03-02T07:46:41.000Z" itemprop="datePublished">2016-03-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/i-am-in-march/">我在三月的水谷里，等着你来；一起看四月的流云，相伴此生</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨夜，我梦见你我漫步云端。<br>醒来，却发现我们天各一方。</p>
-<p>枕边阵阵的凉意带着我的思念，飞向北方。<br>越过高楼大厦，飞过丛山峻岭，他从星空坠落，是否进入你的心扉？<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/02/i-am-in-march/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ios-uiautomation" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/23/ios-uiautomation/" class="article-date">
-  	<time datetime="2016-01-23T11:45:01.000Z" itemprop="datePublished">2016-01-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/23/ios-uiautomation/">iOS UIAutomation Q&amp;A</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>收集了我在使用instruments UIAutomation过程中遇到的问题，没有什么先后顺序，欢迎大家补充</p>
-<ol>
-<li>Q: 有哪些准备工作要做？<br>A: 如下：<ul>
-<li>打开<code>开发者</code>选项中的<code>Enable UI Automation</code></li>
-<li>app使用debug模式安装，采用<code>iPhone Developer</code>签名</li>
-</ul>
-</li>
-</ol>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动专项/">移动专项</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/23/ios-uiautomation/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-design-factory" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-design-factory" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/10/design-factory/" class="article-date">
@@ -321,12 +200,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/10/design-factory/">工厂模式</a>
+    <h1 class="article-title" itemprop="name">
+      工厂模式
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -411,399 +301,77 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/singleton/" class="article-date">
-  	<time datetime="2015-11-28T09:36:50.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2016/01/23/ios-uiautomation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/singleton/">单例模式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u91CA_u4E49"><a href="#u91CA_u4E49" class="headerlink" title="释义"></a>释义</h2><p>在程序运行期间，某个类只生成一个实例且自行实例化并向整个系统提供该实例。<br>以老师上课作为例子，每节课只能有一个老师，但可以有很多学生，老师在这里就是唯一的实例，被所有学生共享。<br>单例模式是非常简单但很常用的模式。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/28/singleton/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js-class" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/20/js-class/" class="article-date">
-  	<time datetime="2015-11-20T07:06:19.000Z" itemprop="datePublished">2015-11-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          iOS UIAutomation Q&amp;A
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/20/js-class/">javascript创建对象的几种方法</a>
-    </h1>
   
+    <a href="/2015/11/28/singleton/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单例模式</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u5DE5_u5382_u6A21_u5F0F"><a href="#u5DE5_u5382_u6A21_u5F0F" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>通过<code>new</code>关键字直接创建对象</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wow = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">wow.name = <span class="string">"魔兽世界"</span>;</span><br><span class="line">wow.company = <span class="string">"暴雪"</span>;</span><br><span class="line">wow.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.company + <span class="string">"制作了"</span> + <span class="keyword">this</span>.name); </span><br><span class="line">&#125;;</span><br><span class="line">wow.run(); <span class="comment">//暴雪制作了魔兽世界</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/20/js-class/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-css-position" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/12/css-position/" class="article-date">
-  	<time datetime="2015-11-12T02:27:14.000Z" itemprop="datePublished">2015-11-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/12/css-position/">CSS定位</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>精美的页面离不开合理的布局，前端页面布局中最重要的因素是定位和浮动，今天就这两方面做些探讨。<br>使用的初始代码如下</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/12/css-position/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
-
-
-
-  
-    <article id="post-thinking-in-ill" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/12/thinking-in-ill/" class="article-date">
-  	<time datetime="2015-10-12T08:59:01.000Z" itemprop="datePublished">2015-10-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/12/thinking-in-ill/">有病呻吟</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>人很脆弱，真的。</p>
-<p>我躺在床上，喉咙像喝了滚烫的油水一样疼痛，脑袋也如灌了铅似的沉重，一阵阵的寒意袭来，只能蜷缩着以求一点温暖，病来如山倒，古人诚不欺我。</p>
-<p>一把小刀，一个狼锤，一个肉眼不可见的病毒，都会带走我们的生命，纵观历史，疾病造成了非常巨大的灾难。14世纪中叶肆略欧洲大陆的黑死病夺去了7000多万人的生命；20世纪初期，西班牙流感造成了是全球减少了5%的人口，还有疯牛病、艾滋、非典等等、等等，太多太多的威胁环绕在我们周围，使我们寝食难安，如狼环伺。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/10/12/thinking-in-ill/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="design-factory" data-title="工厂模式" data-url="http://huntstack.github.io/2015/12/10/design-factory/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuer"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-
-
-  
-    <article id="post-dream" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/10/dream/" class="article-date">
-  	<time datetime="2015-09-10T08:37:11.000Z" itemprop="datePublished">2015-09-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/10/dream/">梦</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　昨夜，做了一个梦,<br>　在梦中，<br>　产品对我说：“自己研究产品吧，我不再帮你了，去分析去码字吧。”<br>　测试员对我说：“我不再帮你测试了，不会测试的开发不是好的老师。”<br>　设计师对我说：“你自己去画图。”<br>　<br>　惶恐、孤独的我，被行业所抛弃,<br>　我到处受到白眼和排挤，<br>　我乞求上苍的怜悯，<br>　换来的是更无情的诅咒。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/10/dream/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-php-time-function" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/23/php-time-function/" class="article-date">
-  	<time datetime="2015-08-23T03:07:00.000Z" itemprop="datePublished">2015-08-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/23/php-time-function/">php时间函数浅析</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>天地四方曰宇，往古来今曰宙</p>
-</blockquote>
-<p>时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。<br>但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/23/php-time-function/#more">全文阅读 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -827,8 +395,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -8,20 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="天地四方曰宇，往古来今曰宙
 
-时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所">
+时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="php时间函数浅析">
 <meta property="og:url" content="http://huntstack.github.io/2015/08/23/php-time-function/index.html">
 <meta property="og:site_name" content="山野幽居|赏八方风景，饮一口清泉">
 <meta property="og:description" content="天地四方曰宇，往古来今曰宙
 
-时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所">
-<meta property="og:updated_time" content="2016-01-23T09:07:02.000Z">
+时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。">
+<meta property="og:updated_time" content="2016-03-03T08:56:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php时间函数浅析">
 <meta name="twitter:description" content="天地四方曰宇，往古来今曰宙
 
-时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所">
+时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。">
   
     <link rel="alternative" href="/atom.xml" title="山野幽居|赏八方风景，饮一口清泉" type="application/atom+xml">
   
@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/前端/" style="font-size: 15px;">前端</a> <a href="/tags/移动专项/" style="font-size: 10px;">移动专项</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/前端/" style="font-size: 15px;">前端</a> <a href="/tags/移动专项/" style="font-size: 10px;">移动专项</a> <a href="/tags/设计模式/" style="font-size: 15px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
 					</div>
 				</section>
 				
@@ -222,9 +222,10 @@
         <blockquote>
 <p>天地四方曰宇，往古来今曰宙</p>
 </blockquote>
-<p>时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。<br>但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。<br>公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。<br>关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所经过的秒数，不考虑闰秒，什么是闰秒参考这里。<br>下面就来说说php中时间的处理方法，以获取当前时间为例</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">     date_default_timezone_set(<span class="string">'Asia/Shanghai'</span>);</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,time()).<span class="string">"\n"</span>;</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,strtotime(<span class="string">"now"</span>)).<span class="string">"\n"</span>;</span><br><span class="line">     <span class="variable">$date</span> = <span class="keyword">new</span> DateTime();</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.<span class="variable">$date</span>-&gt;format(<span class="string">"Y-m-d H:i:s"</span>).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>时间是世界的重要组成部分，不论花开花落，还是云卷云舒都有它的影子。<br>但它源起何处？又将去向何方？没人知道答案，也不需要答案，我们需要的只是一个相对的起点来标识时间，现今世界普遍采用公元纪年法来表示。</p>
 <a id="more"></a>
+<p>公元纪年法以耶稣诞生日记为公元1年（没有公元0年），中国处于汉平帝刘衎（不会读。。。）登基第二年即元始元年。<br>关于时间的另一个概念是unix时间戳，是从1970年1月1日开始所经过的秒数，不考虑闰秒，什么是闰秒参考这里。<br>下面就来说说php中时间的处理方法，以获取当前时间为例</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">     date_default_timezone_set(<span class="string">'Asia/Shanghai'</span>);</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,time()).<span class="string">"\n"</span>;</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.date(<span class="string">"Y-m-d H:i:s"</span>,strtotime(<span class="string">"now"</span>)).<span class="string">"\n"</span>;</span><br><span class="line">     <span class="variable">$date</span> = <span class="keyword">new</span> DateTime();</span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"now is "</span>.<span class="variable">$date</span>-&gt;format(<span class="string">"Y-m-d H:i:s"</span>).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="u65F6_u533A_u8BBE_u7F6E"><a href="#u65F6_u533A_u8BBE_u7F6E" class="headerlink" title="时区设置"></a>时区设置</h3><p><code>date_default_timezone_set</code>用于设置时区，优先级别高于php.ini中设置的<code>date.timezone</code>属性，可设置的时区列表见这里，与之对应的是<code>date_default_timezone_get</code>获取由set函数设置的时区。</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">    date_default_timezone_set(<span class="string">'Asia/Shanghai'</span>);</span><br><span class="line">    <span class="variable">$date_set</span> = date_default_timezone_get();</span><br><span class="line">    <span class="comment">//如果与配置文件中的时区设置相同则设置为美国时区</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$date_set</span> == ini_get(<span class="string">"date.timezone"</span>))&#123;</span><br><span class="line">        date_default_timezone_set(<span class="string">'America/Los_Angeles'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">echo</span> date(<span class="string">"Y-m-d H:i:s"</span>).<span class="string">"\n"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="u83B7_u53D6UNIX_u65F6_u95F4_u6233"><a href="#u83B7_u53D6UNIX_u65F6_u95F4_u6233" class="headerlink" title="获取UNIX时间戳"></a>获取UNIX时间戳</h3><p>常用的方法有三种：time(),microtime(),strotime(“now”)</p>
