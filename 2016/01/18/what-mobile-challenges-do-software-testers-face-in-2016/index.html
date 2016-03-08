@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>2016移动测试面临的挑战 | 山野幽居|赏八方风景，饮一口清泉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文链接：What Mobile Challenges Do Software Testers Face In 2016
+我们询问了软件测试社区：“2016年移动测试将有哪些挑战”，下面是最佳答案。
+无法预料的弹框很难写一个可重复使用的自动化脚本，解决随时会出现的广告或其他风格的弹窗，他们掩盖了当前界面。这个问题自从GUI产生以来就一直存在，2016年依然如此。（广告弹窗是目前最多的一种）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016移动测试面临的挑战">
+<meta property="og:url" content="http://huntstack.github.io/2016/01/18/what-mobile-challenges-do-software-testers-face-in-2016/index.html">
+<meta property="og:site_name" content="山野幽居|赏八方风景，饮一口清泉">
+<meta property="og:description" content="原文链接：What Mobile Challenges Do Software Testers Face In 2016
+我们询问了软件测试社区：“2016年移动测试将有哪些挑战”，下面是最佳答案。
+无法预料的弹框很难写一个可重复使用的自动化脚本，解决随时会出现的广告或其他风格的弹窗，他们掩盖了当前界面。这个问题自从GUI产生以来就一直存在，2016年依然如此。（广告弹窗是目前最多的一种）">
+<meta property="og:updated_time" content="2016-03-08T06:47:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2016移动测试面临的挑战">
+<meta name="twitter:description" content="原文链接：What Mobile Challenges Do Software Testers Face In 2016
+我们询问了软件测试社区：“2016年移动测试将有哪些挑战”，下面是最佳答案。
+无法预料的弹框很难写一个可重复使用的自动化脚本，解决随时会出现的广告或其他风格的弹窗，他们掩盖了当前界面。这个问题自从GUI产生以来就一直存在，2016年依然如此。（广告弹窗是目前最多的一种）">
+  
+    <link rel="alternative" href="/atom.xml" title="山野幽居|赏八方风景，饮一口清泉" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/images/panda.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">玉关</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">赏八方风景，饮一口清泉</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/前端/" style="font-size: 13.33px;">前端</a> <a href="/tags/移动专项/" style="font-size: 10px;">移动专项</a> <a href="/tags/翻译/" style="font-size: 13.33px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 20px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 16.67px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">moving fast</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">玉关</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/images/panda.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">玉关</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">赏八方风景，饮一口清泉</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-what-mobile-challenges-do-software-testers-face-in-2016" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/18/what-mobile-challenges-do-software-testers-face-in-2016/" class="article-date">
+  	<time datetime="2016-01-18T05:15:04.000Z" itemprop="datePublished">2016-01-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2016移动测试面临的挑战
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻译/">翻译</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文链接：<a href="http://www.ministryoftesting.com/2016/01/what-mobile-challenges-do-software-testers-face-in-2016/" target="_blank" rel="external">What Mobile Challenges Do Software Testers Face In 2016</a></p>
+<p>我们询问了软件测试社区：“2016年移动测试将有哪些挑战”，下面是最佳答案。</p>
+<h3 id="u65E0_u6CD5_u9884_u6599_u7684_u5F39_u6846"><a href="#u65E0_u6CD5_u9884_u6599_u7684_u5F39_u6846" class="headerlink" title="无法预料的弹框"></a>无法预料的弹框</h3><p>很难写一个可重复使用的自动化脚本，解决随时会出现的广告或其他风格的弹窗，他们掩盖了当前界面。<br>这个问题自从GUI产生以来就一直存在，2016年依然如此。（广告弹窗是目前最多的一种）</p>
+<a id="more"></a>
+<h4 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h4><p>在后台起一个常驻线程，不断的扫面可能出现的“未知”弹窗。如果发现，就删除它–通常是触发“Escape”键的事件。你也需要确保你的主要测试脚本的适应性，以等待弹窗处理完成。</p>
+<h3 id="u6237_u5916_u5B9E_u5730_u6D4B_u8BD5"><a href="#u6237_u5916_u5B9E_u5730_u6D4B_u8BD5" class="headerlink" title="户外实地测试"></a>户外实地测试</h3><p>其中一个很大的挑战是如何进行“户外测试”。我所知道的问题，是许多测试工程师，用测试web和桌面应用的方法来测试移动应用。但是，移动应用是完全不同于web和桌面应用的存在。他们的使用环境不同，所处地区的网络环境也大不相同。如果只在快速、稳定的网络下测试移动应用，那么许多问题就不会在测试及预发布版本中发现。</p>
+<p>户外测试移动应用有可能发现以下问题：</p>
+<ul>
+<li>晴天，下雨天的屏幕亮度调节</li>
+<li>传感器的测试，它经常被其他元素干扰，例如：建筑物、汽车或者其他障碍物</li>
+<li>网络。由于不断的移动，不能保证用户一直在同一个网络环境中使用应用。举个例子，当从4G切换到无线的时候，会对UI造成影响，这些影响都会在后台处理完成。</li>
+</ul>
+<p>上面这些都不会在公司环境中被测试到。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-1"><a href="#u89E3_u51B3_u65B9_u6848-1" class="headerlink" title="解决方案"></a>解决方案</h4><p>解决方法十分简单。只要走出办公室，到户外测试就可以了。因应用不同，需要的环境也有所不同。如果你在测试商业应用，那么这个应用的使用环境很可能是轿车或火车上；如果你在测试一个运动方面的应用，那么你就需要在运动的时候使用它。</p>
+<p>在用户使用的真实场景中测试应用是十分重要的事情。我建议每个测试工程师，打包需要的测试工具，走到外面，实地测试。</p>
+<p>户外测试有个非常重要的部分是使用crash监控工具，像HockeyApp或者Crashlytics这样的，以记录造成crash的各种原因。另外，记得带上一支笔和本子，随时记录发现的问题。</p>
+<h3 id="u8BBE_u5907_u788E_u7247_u5316"><a href="#u8BBE_u5907_u788E_u7247_u5316" class="headerlink" title="设备碎片化"></a>设备碎片化</h3><p>安卓设备型号实在太多了，你不能完全的测试到，只能选择其中的一部分。对不同的操作系统（三星、小米等），都会有许多潜在的风险。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-2"><a href="#u89E3_u51B3_u65B9_u6848-2" class="headerlink" title="解决方案"></a>解决方案</h4><p>如果只有一种安卓设备就好了，可是，我想多了。至今为止，没有什么简单的解决方案。你只能选择和用户沟通，测试那些使用率最高的设备。</p>
+<h3 id="Native_vs_Webview"><a href="#Native_vs_Webview" class="headerlink" title="Native vs Webview"></a>Native vs Webview</h3><p>这个问题存在已经有很长时间了，相比于原生的API，web界面或者其他替代品要花费更多的时间。</p>
+<p>测试hybrid app是个非常痛苦的事情，特别是在native和web界面有对接需求的时候。你会发现，native的界面会比web界面有更快的响应时间和更美观的界面。更难的地方在于native和web界面之间的通信。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-3"><a href="#u89E3_u51B3_u65B9_u6848-3" class="headerlink" title="解决方案"></a>解决方案</h4><p>当你将要构建应用的时候，请确保所有API已经在测试环境中调试完毕。</p>
+<p>对所有的web界面，要保证各界面和native的一致性和一贯性。这样至少在native和web界面之间切换的时候，不会发现明显的不同。</p>
+<h3 id="u79FB_u52A8_u81EA_u52A8_u5316"><a href="#u79FB_u52A8_u81EA_u52A8_u5316" class="headerlink" title="移动自动化"></a>移动自动化</h3><p>移动自动化的环境不容乐观–由两个大厂商制定的子标准，昂贵的测试工具可以测试所有东西，或者选择更小的开源工具，市场被移动操作系统供应商主导。</p>
+<p>许多人还在采用“一切自动化”的策略，殊不知，这比桌面应用更难办到。移动端是非常复杂的，UI自动化并不是一个很好的策略。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-4"><a href="#u89E3_u51B3_u65B9_u6848-4" class="headerlink" title="解决方案"></a>解决方案</h4><p>把精力集中在理解业务和常用的web服务，另外，轻量级的UI自动化是个不错的选择。需要注意的是，你所使用的自动化工具会停止工作，如果操作系统供应商更改了系统API。</p>
+<h3 id="u5B89_u5353_u7684_u5546_u4E1A_u5316"><a href="#u5B89_u5353_u7684_u5546_u4E1A_u5316" class="headerlink" title="安卓的商业化"></a>安卓的商业化</h3><p>随着手机制造门槛的逐步降低，越来越多的小型手机制造商加入了移动行业。这些手机厂商会大量修改原生操作系统并加入自己的东西，这将导致越来越多的自定义ROM出现，市场越来越混乱。</p>
+<p>你能够测试安卓机器的占比越来越低，覆盖率在逐年下降，也许选择模拟器进行测试会是个不错的开始。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-5"><a href="#u89E3_u51B3_u65B9_u6848-5" class="headerlink" title="解决方案"></a>解决方案</h4><p>有两种解决方案：</p>
+<ol>
+<li>抛弃真机测试，全部采用模拟器或者是通用的机器，例如Nexus.不同的ROM之间很难进行调试以及问题的定位。</li>
+<li>拟定一份支持设备的列表。告诉用户你支持哪些设备，对其他的设备提供部分支持。对支持的设备，要保证百分之百的测试覆盖率。</li>
+</ol>
+<h3 id="u81EA_u52A8_u5316_u6D4B_u8BD5_u5DE5_u5177_u6548_u7387_u4E0D_u9AD8"><a href="#u81EA_u52A8_u5316_u6D4B_u8BD5_u5DE5_u5177_u6548_u7387_u4E0D_u9AD8" class="headerlink" title="自动化测试工具效率不高"></a>自动化测试工具效率不高</h3><p>这只是测试的一个小方面，目前没有非常快速的UI自动化工具。Appium和UI Automation尝试过，但在速度方面不尽如人意。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-6"><a href="#u89E3_u51B3_u65B9_u6848-6" class="headerlink" title="解决方案"></a>解决方案</h4><p>我想主要的方法就是了开发者一起工作，告诉他们这些效率上的损失是值得的。</p>
+<h3 id="u79FB_u52A8_u7AEF_u7684_u9700_u6C42_u603B_u662F_u88AB_u6700_u540E_u5B9E_u73B0"><a href="#u79FB_u52A8_u7AEF_u7684_u9700_u6C42_u603B_u662F_u88AB_u6700_u540E_u5B9E_u73B0" class="headerlink" title="移动端的需求总是被最后实现"></a>移动端的需求总是被最后实现</h3><p>至少在我的公司里，他们说会首先实现移动断的需求，但是总是留到最后才做。所以，移动端的测试就更加不可能有什么产出了。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-7"><a href="#u89E3_u51B3_u65B9_u6848-7" class="headerlink" title="解决方案"></a>解决方案</h4><p>我并没有什么好的解决方案。这个常常是资金方面的问题–人越多，做的越快。有限的资源下，只能尽力的完成移动端的需求。</p>
+<h3 id="u4E0D_u591F_u6210_u719F_u7684_u81EA_u52A8_u5316_u5DE5_u5177"><a href="#u4E0D_u591F_u6210_u719F_u7684_u81EA_u52A8_u5316_u5DE5_u5177" class="headerlink" title="不够成熟的自动化工具"></a>不够成熟的自动化工具</h3><p>web测试工程师有selenium可以用，selenium已经诞生有10年的时间了。但是在移动领域，大部分的工具只有2到3年的时间。不仅如此，没有一个完美的工具，他们总是各有利弊，需要根据需求取舍，从而使市场被碎片化。</p>
+<h4 id="u89E3_u51B3_u65B9_u6848-8"><a href="#u89E3_u51B3_u65B9_u6848-8" class="headerlink" title="解决方案"></a>解决方案</h4><p>需要更多的人来参与到移动端的自动化领域中来，支持主要的开源框架，例如appium，即将推出1.5版本，这是一个非常重大的进步。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/02/i-am-in-march/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          我在三月的水谷里，等着你来；一起看四月的流云，相伴此生
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/11/ios-uiautomation/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS UIAutomation Q&amp;A</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="what-mobile-challenges-do-software-testers-face-in-2016" data-title="2016移动测试面临的挑战" data-url="http://huntstack.github.io/2016/01/18/what-mobile-challenges-do-software-testers-face-in-2016/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuer"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 玉关
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
