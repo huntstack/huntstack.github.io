@@ -22,7 +22,7 @@ demo.py
 <meta property="og:image" content="http://huntstack.github.io/images/2016/python-closure-4.png">
 <meta property="og:image" content="http://huntstack.github.io/images/2016/python-closure-5.png">
 <meta property="og:image" content="http://huntstack.github.io/images/2016/python-closure-6.png">
-<meta property="og:updated_time" content="2016-03-10T09:35:02.000Z">
+<meta property="og:updated_time" content="2016-03-10T12:56:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python 闭包">
 <meta name="twitter:description" content="理解闭包，先理解函数对象的作用域，先看一个例子
@@ -122,7 +122,7 @@ demo.py
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 13.33px;">前端</a> <a href="/tags/测试技术/" style="font-size: 13.33px;">测试技术</a> <a href="/tags/移动专项/" style="font-size: 10px;">移动专项</a> <a href="/tags/翻译/" style="font-size: 13.33px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 20px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 16.67px;">随笔</a>
+						<a href="/tags/ios/" style="font-size: 10px;">ios</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/前端/" style="font-size: 13.33px;">前端</a> <a href="/tags/测试技术/" style="font-size: 13.33px;">测试技术</a> <a href="/tags/移动专项/" style="font-size: 10px;">移动专项</a> <a href="/tags/翻译/" style="font-size: 13.33px;">翻译</a> <a href="/tags/设计模式/" style="font-size: 20px;">设计模式</a> <a href="/tags/随笔/" style="font-size: 16.67px;">随笔</a>
 					</div>
 				</section>
 				
@@ -230,7 +230,7 @@ demo.py
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_inner</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">123</span></span><br><span class="line">    <span class="keyword">print</span> add_inner()</span><br><span class="line">add()</span><br><span class="line">add_inner()</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><img src="/images/2016/python-closure-1.png" alt="1"></p>
-<p>由于python的作用域遵循LGB原则，即从local,global,builtin逐级向上查找。<br>当我们在<code>demo.py</code>中调用<strong>add_inner()</strong>的时候，当前的local作用域是和<strong>add()</strong>这个函数同级别的，而<strong>add_inner()</strong>的作用域在<strong>add()</strong>内部，所以我们是在函数作用域之外做调用操作了。</p>
+<p>由于python的作用域遵循LGB原则，即从local,global,buildin逐级向上查找。<br>当我们在<code>demo.py</code>中调用<strong>add_inner()</strong>的时候，当前的local作用域是和<strong>add()</strong>这个函数同级别的，而<strong>add_inner()</strong>的作用域在<strong>add()</strong>内部，所以我们是在函数作用域之外做调用操作了。</p>
 <h3 id="u95ED_u5305"><a href="#u95ED_u5305" class="headerlink" title="闭包"></a>闭包</h3><p>python中一切都是对象，包括函数，既然是对象，就可以通过返回值返回，并可以做赋值操作。<br>我们将<code>add_inner</code>作为返回值返回</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_inner</span><span class="params">(value, base)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> value + base</span><br><span class="line">    <span class="keyword">return</span> add_inner</span><br><span class="line"></span><br><span class="line">plus = add()</span><br><span class="line"></span><br><span class="line">plus(<span class="number">1</span>, <span class="number">20</span>) <span class="comment"># 21</span></span><br><span class="line">plus(<span class="number">10</span>, <span class="number">20</span>) <span class="comment"># 30</span></span><br></pre></td></tr></table></figure>
 <p>如果能确定每次都是加上一个固定的值，那么可以这样写</p>
